@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>Fun Stuff Store</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+    	<div id="container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="store.html">Store</a>
+                <a href="extra.html">Extra</a>
+                <a href="utility.html">Utility</a>
+                <a href="https://github.com/charris6864/Project3">GitHub</a>
+                <a href="https://build.phonegap.com/apps/1111270/builds">PhoneGap</a>   
+            </nav>
+            
+            <div id="headerIndex">
+                <h1>Fun Stuff Store</h1>
+            </div>
+            
+            <div id="image1">
+                <img alt="mainImage" src="images/mainGame.jpg">            
+            </div><br /><br /><br /><br />
+            
+            <div id="utilityPage">
+               <!-- <p>Please click on button to enter a number into the counter</p>
+                <button onClick="numberFunction()">Number Start</button> -->
+                <form id="tipCalculator">
+        			Input a number between 0 and 10:<input id="number" /> 
+                </form>
+                 <input type="button" id="calculate" value="Input the number" />
+                
+                <div id="utility1" onClick="onClick(event)"></div>
+                    <br /> 
+                <div id="utility2"></div>	
+                
+              
+            </div>
+       	</div>
+        
+        
+        
+        <footer>
+                	IGL &copy; 2014
+        </footer>
+        <script>
+				var inputNumber = document.getElementById('number');
+				var button = document.getElementById('calculate');
+				var myDiv = document.getElementById('utility2');
+				var myDiv1 = document.getElementById('utility1');
+				var number1 = 0;
+				
+				button.addEventListener('click',
+				function(event) {
+					//turn the input into a number
+					number1 = parseFloat(inputNumber.value);
+					myDiv1.innerHTML = "Now you want to click me";
+					myDiv.innerHTML = number1;
+					//return number1;
+					console.log(number1);										
+				});
+								
+				
+				//event handle
+				function onClick(event) {
+					console.log('DIV has been clicked');	
+					number1 += 1;
+					//make it go to the div
+					myDiv.innerHTML = number1;
+				};			
+			</script>
+	</body>
+</html>
